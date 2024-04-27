@@ -1,21 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>三大城市每月平均氣溫比較圖</title>
-    <!-- 引入 Highcharts 库 -->
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-</head>
-<body>
-    <!-- 圖表容器 -->
-    <div id="temperatureChart" style="width: 800px; height: 400px;"></div>
+<script src="http://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+<div id=”container” style=”width: 100％; height: 400px”></div>
 
-    <!-- 執行 JavaScript 腳本來繪製圖表 -->
-    <script src="path_to_your_script.js"></script>
-</body>
-</html>
-
-// 定義每月平均氣溫數據
+// 定義三個城市每月平均氣溫數據
 const citiesData = {
     "梧棲": [16.1, 16.4, 18.9, 22.7, 25.8, 28.1, 29.2, 28.9, 27.6, 24.7, 21.8, 18.1],
     "臺中": [17.0, 17.7, 20.1, 23.5, 26.4, 28.1, 28.9, 28.4, 27.8, 25.5, 22.6, 18.7],
@@ -29,7 +15,7 @@ const months = [
 ];
 
 // 根據數據創建 Highcharts 圖表
-Highcharts.chart('temperatureChart', {
+Highcharts.chart('container', {
     chart: {
         type: 'line'
     },
